@@ -5,7 +5,7 @@ const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Lord of the Rings: A Trilogy</h1>
+        <h1>Lord of the Rings</h1>
       </header>
       <main>
 
