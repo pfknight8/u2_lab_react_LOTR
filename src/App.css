@@ -1,18 +1,75 @@
+html {
+  background-color: silver;
+}
+
 .App {
   text-align: center;
 }
 
 .App-header {
   background-color: #282c34;
-  min-height: 20vh;
+  background-image: url('ShireBanner.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  min-height: 30vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #eecc76;
+  text-shadow: 4px 4px #282c34 ;
 }
 
 img {
   height: 200px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.movieDiv {
+  margin: 15px;
+  border: #282c34 solid 5px;
+  border-radius: 20px;
+  font-family: fantasy;
+  animation: wiggle;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+@keyframes wiggle {
+  0% {transform: rotate(-20deg);}
+  50% {transform: rotate(0deg);}
+  100% {transform: rotate(20deg);}
+}
+
+#firstMovie {
+  background-color: maroon;
+  color: antiquewhite;
+}
+#secondMovie {
+  background-color: darkolivegreen;
+  color: #eecc76;
+}
+#thirdMovie {
+  background-color: slategray;
+  color: snow;
+}
+
+@media screen and (max-width: 700px) {
+  .App-header {
+    min-height: 17vh;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+  div {
+    font-size: smaller;
+  }
 }
